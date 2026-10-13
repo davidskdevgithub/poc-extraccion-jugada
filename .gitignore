@@ -1,0 +1,59 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- Python / uv ---
+# Entorno virtual local (pyproject.toml, .python-version y uv.lock SÍ se versionan)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Herramientas
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Datos locales (videos e imágenes de entrada, demasiado pesados para git) ---
+data/local/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.m4v
+
+# --- Resultados generados por ejecución (architecture.md §2: excluidos de Git) ---
+artifacts/
+
+# --- Salidas de experimentos (evidencia visual generada) ---
+# Se versionan los .md de protocolo e informes; lo generado va aparte.
+experiments/**/out/
+experiments/**/output/
+experiments/**/*.mp4
+experiments/**/*.png
+experiments/**/*.jpg
+experiments/**/*.jpeg
+frames/
+
+# --- Modelos / pesos (se registran origen y versión en docs, no en git) ---
+*.pt
+*.pth
+*.onnx
+*.weights
+
+# --- Entornos y secretos ---
+.env
+.env.*
+*.local
+
+# --- Editores / IDEs ---
+.vscode/
+.idea/
+*.swp
